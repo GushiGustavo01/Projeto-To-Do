@@ -12,21 +12,45 @@
 <body>
     <main>
         <section>
-           
-            <div>
-              <input type="text" placeholder="Adicione tarefa">
-              <button>Adicionar</button>
 
-              <ul>
-                <li>
-                    <i class="bi bi-check2-circle" style="color:green;"></i>
-                    Tarefas que desejo...
-                    <i class="bi bi-x-circle" style="color:red;"></i>
-                </li>
-              </ul>
+            <div>
+                <input type="text" placeholder="Adicione tarefa" id="input">
+                <button onclick="AdicionarTarefa()">Adicionar</button>
+
+                <ul>
+                    <li>
+                        <i class="bi bi-check2-circle" style="color:green;"></i>
+                        Tarefas que desejo...
+                        <i class="bi bi-x-circle" style="color:red;"></i>
+                    </li>
+                    <li>
+                        <i class="bi bi-check2-circle" style="color:green;"></i>
+                        Tarefas que desejo...
+                        <i class="bi bi-x-circle" style="color:red;"></i>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
 </body>
+<script>
+
+
+    let minhaListaDeTarefas = [];
+
+    function AdicionarTarefa() {
+        const input = document.querySelector("input").value;
+
+        
+        if (input === "") {
+            alert("adicione suas tarefas!!")
+        } else {
+            minhaListaDeTarefas.push(input);
+            console.log(minhaListaDeTarefas);
+            document.querySelector("input").value = "";
+        }
+    }
+
+</script>
 
 </html>
