@@ -18,16 +18,7 @@
                 <button onclick="AdicionarTarefa()">Adicionar</button>
 
                 <ul>
-                    <li>
-                        <i class="bi bi-check2-circle" style="color:green;"></i>
-                        Tarefas que desejo...
-                        <i class="bi bi-x-circle" style="color:red;"></i>
-                    </li>
-                    <li>
-                        <i class="bi bi-check2-circle" style="color:green;"></i>
-                        Tarefas que desejo...
-                        <i class="bi bi-x-circle" style="color:red;"></i>
-                    </li>
+                
                 </ul>
             </div>
         </section>
@@ -37,18 +28,36 @@
 
 
     let minhaListaDeTarefas = [];
-
+    const listaCompleta = document.querySelector("ul");
     function AdicionarTarefa() {
         const input = document.querySelector("input").value;
 
-        
+
         if (input === "") {
-            alert("adicione suas tarefas!!")
+            alert("adicione suas tarefas!!");
         } else {
             minhaListaDeTarefas.push(input);
-            console.log(minhaListaDeTarefas);
             document.querySelector("input").value = "";
+            mostarTarefas();
         }
+    }
+    function mostarTarefas() {
+
+        let novaLi = "";
+
+        minhaListaDeTarefas.forEach((tarefa)=> {
+
+            novaLi = novaLi + `
+            <li>
+                <i class="bi bi-check2-circle" style="color:green;"></i>
+                ${tarefa}
+                <i class="bi bi-x-circle" style="color:red;"></i>
+            </li>`
+
+        });
+
+       listaCompleta.innerHTML = novaLi;
+
     }
 
 </script>
