@@ -18,7 +18,7 @@
                 <button onclick="AdicionarTarefa()">Adicionar</button>
 
                 <ul>
-                
+
                 </ul>
             </div>
         </section>
@@ -37,8 +37,9 @@
         if (input === "") {
             alert("adicione suas tarefas!!");
         } else {
-            minhaListaDeTarefas.push({tarefa:input,
-                concluida:false
+            minhaListaDeTarefas.push({
+                tarefa: input,
+                concluida: false
 
             });
             document.querySelector("input").value = "";
@@ -50,7 +51,7 @@
 
         let novaLi = "";
 
-        minhaListaDeTarefas.forEach((item, index)=> { // Pegando o valor do array e seu Index.
+        minhaListaDeTarefas.forEach((item, index) => { // Pegando o valor do array e seu Index.
 
             novaLi = novaLi + `
             <li class="${item.concluida && "done"}">
@@ -61,22 +62,22 @@
 
         });
 
-       listaCompleta.innerHTML = novaLi;
-           
-    }
-
-    function removerItem(index){
-    minhaListaDeTarefas.splice(index, 1)// Splice Remove a tarefa do array apartir do seu index.
-
-    mostarTarefas();
-
+        listaCompleta.innerHTML = novaLi;
 
     }
 
-    function concluirTarefa(index){
-      minhaListaDeTarefas[index].concluida = !minhaListaDeTarefas[index].concluida
+    function removerItem(index) {
+        minhaListaDeTarefas.splice(index, 1)// Splice Remove a tarefa do array apartir do seu index.
 
-      mostarTarefas()
+        mostarTarefas();
+
+
+    }
+
+    function concluirTarefa(index) {
+        minhaListaDeTarefas[index].concluida = !minhaListaDeTarefas[index].concluida
+
+        mostarTarefas()
     }
 
 </script>
