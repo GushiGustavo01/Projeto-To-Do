@@ -67,3 +67,8 @@ li:hover i{
     opacity: 1;
     transition: 0.7s;
 }
+
+.done{
+    background-color: rgba(12, 41, 12, 0.829);
+    text-decoration: line-through;
+}
