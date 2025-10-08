@@ -31,7 +31,7 @@
     const ul = document.querySelector("ul");
 
     function AdicionarTarefa() {
-    const input = document.querySelector("input").value;
+        const input = document.querySelector("input").value;
 
 
         if (input === "") {
@@ -83,12 +83,12 @@
         mostarTarefas()
     }
 
-    function recarregaritens(){
-       
+    function recarregaritens() {
+
         const pegarlocalstorange = localStorage.getItem("lista");
-        minhaListaDeTarefas = JSON.parse( pegarlocalstorange);
+        minhaListaDeTarefas = JSON.parse(pegarlocalstorange);
         mostarTarefas();
-     
+
 
     }
     recarregaritens()
