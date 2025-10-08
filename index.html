@@ -28,10 +28,10 @@
 
 
     let minhaListaDeTarefas = [];
-    const listaCompleta = document.querySelector("ul");
+    const ul = document.querySelector("ul");
 
     function AdicionarTarefa() {
-        const input = document.querySelector("input").value;
+    const input = document.querySelector("input").value;
 
 
         if (input === "") {
@@ -42,6 +42,7 @@
                 concluida: false
 
             });
+            console.log(minhaListaDeTarefas);
             document.querySelector("input").value = "";
             mostarTarefas();
         }
@@ -54,7 +55,7 @@
         minhaListaDeTarefas.forEach((item, index) => { // Pegando o valor do array e seu Index.
 
             novaLi = novaLi + `
-            <li class="${item.concluida && "done"}">
+            <li class="${item.concluida && "done"}">  
                 <i class="bi bi-check2-circle" style="color:green;" onclick="concluirTarefa(${index})"></i>
                 <p>${item.tarefa}</p>
                 <i class="bi bi-x-circle" style="color:red;" onclick="removerItem(${index})"></i>
@@ -62,7 +63,9 @@
 
         });
 
-        listaCompleta.innerHTML = novaLi;
+        ul.innerHTML = novaLi;
+
+        localStorage.setItem("lista", JSON.stringify(minhaListaDeTarefas));
 
     }
 
@@ -80,6 +83,15 @@
         mostarTarefas()
     }
 
+    function recarregaritens(){
+       
+        const pegarlocalstorange = localStorage.getItem("lista");
+        minhaListaDeTarefas = JSON.parse( pegarlocalstorange);
+        mostarTarefas();
+     
+
+    }
+    recarregaritens()
 </script>
 
 </html>
