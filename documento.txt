@@ -1,0 +1,26 @@
+Aprendizado desse Projeto.
+
+forEach passando dois parametos um para caixa do array outro para o index, podendo listar esse valor ou index podendo ser também ambos.
+
+
+Fazendo interações entre funções chamando uma ao termino da outra.
+
+Alterando array e logo em seguida chamando a função onde a lista de dados estão fazendo assim a atualização. 
+
+comando splice que exclui um item do array e retorna ele sem esse item.
+
+cirando uma lista dinamicamente com um forEach e adicionando com o innerhtml dentro de um elemento.
+
+Tarefas desse programa
+
+adicinar esses valores em um array 
+listar esse valores em tela.
+remover esse valores do array
+marcar esse valores como concluido
+Não perder esses valores quando a page for atualizada com o localstorage
+
+oparador de && para dois valores se o primeiro for verdadeiro mostra o segundo valor.
+
+
+passando um objeto para um array e definindo ele como false
+
