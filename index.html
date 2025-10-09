@@ -12,10 +12,11 @@
 <body>
     <main>
         <section>
-
+                <h1>MINHAS TAREFAS</h1>
             <div>
-                <input type="text" placeholder="Adicione tarefa" id="input">
-                <button onclick="AdicionarTarefa()">Adicionar</button>
+                <input type="text" placeholder="Adicione tarefa" id="input" onkeydown="if(event.key==='Enter')AdicionarTarefa()">
+                <button onclick="AdicionarTarefa()" 
+                >Adicionar</button>
 
                 <ul>
 
@@ -58,7 +59,7 @@
             <li class="${item.concluida && "done"}">  
                 <i class="bi bi-check2-circle" style="color:green;" onclick="concluirTarefa(${index})"></i>
                 <p>${item.tarefa}</p>
-                <i class="bi bi-x-circle" style="color:red;" onclick="removerItem(${index})"></i>
+                <i class="bi bi-x-circle" style="color:#ff0000be;" onclick="removerItem(${index})"></i>
             </li>`
 
         });
