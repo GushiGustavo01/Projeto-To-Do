@@ -87,7 +87,10 @@
     function recarregaritens() {
 
         const pegarlocalstorange = localStorage.getItem("lista");
-        minhaListaDeTarefas = JSON.parse(pegarlocalstorange);
+        if(pegarlocalstorange){
+
+            minhaListaDeTarefas = JSON.parse(pegarlocalstorange);
+        }
         mostarTarefas();
 
 
